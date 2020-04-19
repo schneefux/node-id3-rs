@@ -146,7 +146,7 @@ fn replace_tag(path: String, index: usize, id: String, data: String) {
     tag = unsafe {
         std::mem::transmute(tag_exposed)
     };
-    tag.write_to_path(path, Version::Id3v23).unwrap(); // TODO detect version
+    tag.write_to_path(path, Version::Id3v24).unwrap(); // TODO detect version
 }
 
 // hack for direct access to Tag.frames
