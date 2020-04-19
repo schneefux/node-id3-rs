@@ -4,10 +4,10 @@
   "description": "",
   "main": "lib/index.js",
   "author": "schneefux",
+  "scripts": {
+    "install": "neon build --release"
+  },
   "dependencies": {
     "neon-cli": "^0.4.0"
-  },
-  "scripts": {
-    "install": "neon build"
   }
 }

@@ -1,15 +1,21 @@
 language: node_js
 dist: bionic
-os: linux
+os:
+  - osx
+  - linux
 node_js:
   - "10"
   - "11"
   - "12"
   - "13"
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - rustc
-      - cargo
+cache: cargo
+before_install:
+  # Install Rust and Cargo
+  - curl https://sh.rustup.rs -sSf > /tmp/rustup.sh
+  - sh /tmp/rustup.sh -y
+  - export PATH="$HOME/.cargo/bin:$PATH"
+  - source "$HOME/.cargo/env"
+  # Install NPM packages
+  - node -v
+  - npm -v
+  - npm install
