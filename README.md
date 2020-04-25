@@ -5,6 +5,9 @@
 
 Bindings for [rust-id3](https://github.com/polyfloyd/rust-id3).
 
+Note: This library is not production-ready.
+For an alternative with support for more formats, see [taglib3](https://github.com/schneefux/node-taglib3). 
+
 ## Installation
 
 See the [Neon Bindings docs](https://neon-bindings.com/docs/getting-started/).
